@@ -24,3 +24,40 @@
 + Classmethod & Staticmethod in Python
 
     - *@classmethod*
+
+
++ **Calculated network size**:
+
+    - Convolution + MaxPooling:
+
+        - Output size: **output_width x output_height x numb_filters**
+        
+        ```
+        output_width = (W - F_w + 2*P)/S_w + 1
+
+        - W: width 
+        - F_w & F_h: kernel shape
+        - P: padding
+        - S: stride
+        - f: Number of filters
+        ```
+
+    - Upsampling:
+
+        - Nearest-Neighbor:
+            ```
+            output_size = input_size + 2
+            ```
+
+        - Bilinear with *scale_factor = a*:
+            ```
+            output_size = input_size*2
+            ```
+        
+    - Concatenation:
+
+        - it's made by **third** axis (depth)
+
+        - input_w (=output_w) x input_h (=output_h) x input_depth (=**2*output_depth**)
+
+![Concatenate depth](./figures/concatenation_depth.png)

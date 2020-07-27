@@ -37,6 +37,11 @@
 
     - an expansive path ()
 
++ Network flow:
+
+![Network flow algorithms](./figures/network_flow.png)
+
+
 ### 2.1 Contracting path
 
 + 2 x [Convolutions (3x3) -> ReLU -> MaxPooling (stride=2)]
